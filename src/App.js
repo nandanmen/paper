@@ -1,9 +1,12 @@
 import React from 'react'
+import styled from 'styled-components'
+
 import { Navigation } from './components/navigation'
+import { Button } from './components/button'
 
 export function App() {
   return (
-    <div>
+    <Container>
       <Navigation />
       <header className="App-header">
         <p>
@@ -18,6 +21,13 @@ export function App() {
           Learn React
         </a>
       </header>
-    </div>
+      <Button variant="primary">Create new doc</Button>
+    </Container>
   )
 }
+
+const Container = styled.main`
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+`
