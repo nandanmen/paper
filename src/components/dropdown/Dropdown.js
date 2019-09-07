@@ -1,19 +1,22 @@
-import styled from 'styled-components'
-import { space } from 'styled-system'
-import { themeGet } from '@styled-system/theme-get'
+import React from 'react'
+import Types from 'prop-types'
 import SystemTypes from '@styled-system/prop-types'
 
-const Dropdown = styled.div`
-  border-radius: 4px;
-  box-shadow: ${themeGet('shadow')};
-  ${space}
-`
+import { Container } from './style'
+
+function Dropdown({ isOpen, ...props }) {
+  if (isOpen) {
+    return <Container {...props} />
+  }
+  return null
+}
 
 Dropdown.defaultProps = {
   p: 2
 }
 
 Dropdown.propTypes = {
+  isOpen: Types.bool.isRequired,
   ...SystemTypes.space
 }
 

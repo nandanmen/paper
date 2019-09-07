@@ -9,7 +9,7 @@ export function App() {
   return (
     <Container>
       <Navigation />
-      <Dropdown>
+      <Dropdown isOpen={true}>
         <header className="App-header">
           <p>
             Edit <code>src/App.js</code> and save to reload.
