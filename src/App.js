@@ -3,25 +3,28 @@ import styled from 'styled-components'
 
 import { Navigation } from './components/navigation'
 import { Button } from './components/button'
+import { Dropdown } from './components/dropdown'
 
 export function App() {
   return (
     <Container>
       <Navigation />
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-      <Button variant="primary">Create new doc</Button>
+      <Dropdown>
+        <header className="App-header">
+          <p>
+            Edit <code>src/App.js</code> and save to reload.
+          </p>
+          <a
+            className="App-link"
+            href="https://reactjs.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+        </header>
+      </Dropdown>
+      <Button>Create new doc</Button>
     </Container>
   )
 }
